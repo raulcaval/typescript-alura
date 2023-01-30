@@ -16,13 +16,14 @@ export class NegociacaoController {
     adicionar(): void {
         const negociacao = this.criaNegociacao();
         this.negociacoes.adiciona(negociacao);
-        console.log( this.listar() )
+        console.log(`Negociacão de valor: ${negociacao.valor} salva com sucesso!`);
+        console.log( this.listar() );
         this.limparForm();
     }
 
     listar(): Array<Negociacao> {
-        return this.negociacoes.lista();
-    } 
+        return [...this.negociacoes.lista() ];
+    }
 
     criaNegociacao(): Negociacao {
         const exp = /-/g;

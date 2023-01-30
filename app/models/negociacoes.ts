@@ -10,7 +10,7 @@ export class Negociacoes {
 
     }
 
-    lista(): Array<Negociacao> {
+    lista(): ReadonlyArray<Negociacao> {
         return this.negociacoes;
     }
 
